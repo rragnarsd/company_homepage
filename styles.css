@@ -188,10 +188,6 @@ main {
     width: 100%;
 }
 
-.image img {
-    width: 100%;
-}
-
 /*Projects*/
 
 .projects_container {
@@ -205,8 +201,13 @@ margin-left: 20px;
 
 .projects_container .row {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
     flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
 }
+
 
 /*Card*/
 
@@ -228,6 +229,7 @@ the card has a focus, it will scale up.*/
     transform: scale(1.05);
 }
 
+
 .card_content {
     padding: 1.5rem;
     background: linear-gradient(hsl(0 0% 0% / 0),hsl(20 0% 0% / 0.3) 20%,
@@ -236,8 +238,6 @@ the card has a focus, it will scale up.*/
     /* transform: translateY(65%);
     transition: transform 500ms ease; */
 }
-
-
 
 .card_title {
     position: relative;
@@ -262,6 +262,7 @@ the card has a focus, it will scale up.*/
 }
 
 .card_text {
+padding: 20px 0;
     color: rgb(255, 255, 255 / 0.9);
 }
 
@@ -328,3 +329,56 @@ or laptop you will see the card animated*/
             transition-delay: 0ms !important;
         }
     }
+
+    /*Contact Container*/
+
+    .contact_container {
+        background-color: black;
+        color: white;
+        height: 60vh;
+    }
+
+    .contact_container .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            width: 100%;
+            flex-wrap: wrap;
+    }
+
+    .contact_container .column {
+        margin: 40px 0;
+        justify-content: space-evenly;
+    }
+    .contact_container .column .contact {
+        text-align: center;
+    }
+
+    .form-group {
+        width: 100%;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .contact_container button {
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+        border: 1px solid black;
+        border-radius: 0.5rem;
+        margin-top: 5px;
+    }
+
+    .contact_container button {
+        cursor: pointer;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
