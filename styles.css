@@ -7,6 +7,7 @@
 body {
     line-height: 1.6;
     font-family: sans-serif;
+    letter-spacing: 1.0px;
 }
 
 /*Header*/
@@ -31,6 +32,7 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.8rem;
+    letter-spacing: 1.2px;
 }
 
 .hamburger {
@@ -119,13 +121,14 @@ a {
 
 /*Main*/
 
-main {
+/* main {
     background-color: black;
     padding: 1rem 1.8rem;
-}
+} */
 
 .main_container {
     background-color: black;
+    padding: 1rem 1.8rem;
 }
 
 .main_container .row {
@@ -148,6 +151,15 @@ main {
     width: 100%;
     color: white;
     padding-right: 30px;
+}
+
+.main_container .heading,
+.main_container h3 {
+    letter-spacing: 1.2px;
+}
+
+.main_container .column .text_container .heading h1 {
+    font-size: 34px;
 }
 
 .main_container .column .text_container .heading h2 {
@@ -195,6 +207,7 @@ width: 70%;
 
 .image img{
     width: 100%;
+    margin-left: 50px;
 }
 
 /*About*/
@@ -216,6 +229,7 @@ width: 70%;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
+    letter-spacing: 1.2px;
 }
 
 
@@ -233,6 +247,7 @@ width: 70%;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
+    letter-spacing: 1.2px;
 }
 
 .projects_container .row {
@@ -374,6 +389,14 @@ or laptop you will see the card animated*/
         padding: 100px 0;
     }
 
+    .contact_container h1 {
+        margin-bottom: 100px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1.2px;
+    }
+
     .contact_container .row {
             display: flex;
             align-items: center;
@@ -457,13 +480,24 @@ footer .notice strong {
 } */
 
 @media only screen and (max-width: 900px) {
+    .main_container {
+        padding: 3rem 1.8rem;
+    }
 
-.main_container .column.right .image {
-    width: 100%;
-}
+    .main_container .buttons button {
+        font-size: 14px;
+    }
+
+    .main_container .column.right .image {
+        width: 100%;
+    }
+
+    .main_container .image img {
+    margin-left: 20px;
+    }
 
     .projects_container .column {
-        margin-bottom: 40px;
+        margin-bottom: 60px;
     }
 
     .contact_container .row {
@@ -484,7 +518,7 @@ footer .notice strong {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     .main_container .row {
         align-items: center;
     }
@@ -492,7 +526,11 @@ footer .notice strong {
     .main_container .column.left {
         padding-right: 0;
         align-items: center;
-        margin: 60px 0;
+        margin: 60px 20px;
+    }
+
+    .main_container .column.right .buttons {
+        font-size: 14px;
     }
 
     .main_container .column.left .text_container{
@@ -514,4 +552,10 @@ footer .notice strong {
     .main_container .column.right  {
       display: none;
     }
+
+    .contact_container .column.right {
+        margin: 0 0 40px 0;
+    }
+
+
 }

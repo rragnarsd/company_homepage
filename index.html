@@ -16,13 +16,13 @@
       <a href="" class="nav_logo">Stefania</a>
       <ul class="nav_menu">
         <li class="nav_item">
-          <a href="#">About</a>
+          <a href="#about">About</a>
         </li>
         <li class="nav_item">
-          <a href="#">Projects</a>
+          <a href="#projects">Projects</a>
         </li>
         <li class="nav_item">
-          <a href="#">Contact</a>
+          <a href="#contact">Contact</a>
         </li>
       </ul>
       <div class="hamburger">
@@ -35,143 +35,164 @@
   <hr>
   <main>
 
-    <div class="main_container">
+    <section class="header">
+      <div class="main_container">
         <div class="row">
           <div class="column left">
-              <div class="text_container">
-                <div class="heading">
-                  <h1>Hello World,</h1>
-                  <h2>I'm Stefania</h2>
-                </div>
-                <hr>
-                <div class="about_text">
-                  <h3>Front-End Developer</h3>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto culpa sint inventore doloribus
-                    quod, corrupti cum. Illum, laudantium facilis? Eaque fuga consequatur facere numquam. Magni
-                    perferendis illo distinctio adipisci eveniet.</p>
-                </div>
+            <div class="text_container">
+              <div class="heading">
+                <h1>Hello World,</h1>
+                <h2>I'm Stefania</h2>
               </div>
-              <div class="buttons">
-                <button class="cta_button">Work With Me</button>
-                <button>View CV</button>
-              </div>
-          </div>
-          <div class="column right">
-              <div class="image">
-                <img src="me.png" alt="myself">
+              <hr>
+              <div class="about_text">
+                <h3>Front-End Developer</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto culpa sint inventore doloribus
+                  quod, corrupti cum. Illum, laudantium facilis? Eaque fuga consequatur facere numquam. Magni
+                  perferendis illo distinctio adipisci eveniet.</p>
               </div>
             </div>
+            <div class="buttons">
+              <button class="cta_button">Work With Me</button>
+              <button>View CV</button>
+            </div>
+          </div>
+          <div class="column right">
+            <div class="image">
+              <img src="me.png" alt="myself">
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about_container">
+        <div class="about">
+          <h1>About me</h1>
+          <div class="text-about">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas cum voluptatem, aliquam provident
+              deserunt
+              voluptate possimus excepturi commodi natus earum nostrum nesciunt explicabo dignissimos labore, harum
+              dolore
+              reprehenderit dolores molestiae?</p>
+            <br>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, omnis id! Sint, autem. Quas recusandae
+              quae officia atque repellendus delectus qui harum, suscipit temporibus quaerat quasi. Dolorem ducimus
+              mollitia amet.</p>
+            <br>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, omnis id! Sint, autem. Quas recusandae
+              quae officia atque repellendus delectus qui harum, suscipit temporibus quaerat quasi. Dolorem ducimus
+              mollitia amet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="projects" id="projects">
+      <div class="projects_container">
+        <h1>Portfolio</h1>
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              <div class="card_content">
+                <h2 class="card_title">
+                  Project 1
+                </h2>
+                <p class="card_text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sequi nulla reiciendis, ad repellat,
+                  esse.
+                </p>
+                <a href="#" class="button">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="card_content">
+                <h2 class="card_title">
+                  Project 2
+                </h2>
+                <p class="card_text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sequi nulla reiciendis, ad repellat,
+                  esse.
+                </p>
+                <a href="#" class="button">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="card_content">
+                <h2 class="card_title">
+                  Project 3
+                </h2>
+                <p class="card_text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sequi nulla reiciendis, ad repellat,
+                  esse.
+                </p>
+                <a href="#" class="button">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact_container">
+        <h1>Contact</h1>
+        <div class="row">
+          <div class="column right">
+            <div class="text">
+              <h2>Let's create something<br> great together!</h2>
+              <p>If you like my work and have some cool projects to work on
+                just send me a message on the form to the right or contact me through
+                social media listed below!
+              </p>
+            </div>
+            <div class="social-buttons">
+              <a href="https://www.github.com" target="_blank">Github</a>
+              <span>|</span>
+              <a href="https://www.facebook.com" target="_blank">Facebook</a>
+              <span>|</span>
+              <a href="https://www.twitter.com" target="_blank">Twitter</a>
+              <span>|</span>
+              <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            </div>
+          </div>
+          <div class="column left">
+            <h2 class="contact">
+              Questions?
+            </h2>
+            <form action="#">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email">
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+              </div>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <div class="about_container">
-    <div class="about">
-      <h1>About me</h1>
-      <div class="text-about">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas cum voluptatem, aliquam provident deserunt
-          voluptate possimus excepturi commodi natus earum nostrum nesciunt explicabo dignissimos labore, harum dolore
-          reprehenderit dolores molestiae?</p>
-          <br>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, omnis id! Sint, autem. Quas recusandae quae officia atque repellendus delectus qui harum, suscipit temporibus quaerat quasi. Dolorem ducimus mollitia amet.</p>
-          <br>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, omnis id! Sint, autem. Quas recusandae quae officia atque repellendus delectus qui harum, suscipit temporibus quaerat quasi. Dolorem ducimus mollitia amet.</p>
-      </div>
-    </div>
-  </div>
 
-  <div class="projects_container">
-    <h1>Portfolio</h1>
-    <div class="row">
-      <div class="column">
-        <div class="card">
-          <div class="card_content">
-            <h2 class="card_title">
-              Project 1
-            </h2>
-            <p class="card_text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sequi nulla reiciendis, ad repellat, esse.
-            </p>
-            <a href="#" class="button">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <div class="card_content">
-            <h2 class="card_title">
-              Project 2
-            </h2>
-            <p class="card_text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sequi nulla reiciendis, ad repellat, esse.
-            </p>
-            <a href="#" class="button">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <div class="card_content">
-            <h2 class="card_title">
-              Project 3
-            </h2>
-            <p class="card_text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sequi nulla reiciendis, ad repellat, esse.
-            </p>
-            <a href="#" class="button">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="contact_container">
-    <div class="row">
-      <div class="column right">
-        <div class="text">
-          <h2>Let's create something<br> great together!</h2>
-          <p>If you like my work and have some cool projects to work on
-            just send me a message on the form to the right or contact me through
-            social media listed below!
-          </p>
-        </div>
-        <div class="social-buttons">
-          <a href="#">Github</a>
-          <span>|</span>
-          <a href="#">Facebook</a>
-          <span>|</span>
-          <a href="#">Twitter</a>
-          <span>|</span>
-          <a href="#">Instagram</a>
-        </div>
-      </div>
-      <div class="column left">
-        <h2 class="contact">
-          Contact Me!
-        </h2>
-        <form action="#">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name">
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email">
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea name="message" id="message" cols="30" rows="10"></textarea>
-          </div>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-    </div>
-  </div>
 
   <footer>
     <div class="notice">
       <strong>Stefania</strong>
-       &copy 2021. All Rights Reserved.
+      &copy 2021. All Rights Reserved.
     </div>
   </footer>
 
