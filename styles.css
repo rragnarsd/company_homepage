@@ -177,26 +177,63 @@ main {
 
 .buttons .cta_button {
     margin-right: 20px;
+    background-color: gray;
+    color: white;
 }
 
 .buttons button {
     width: 50%;
     padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
 }
 
-.image  {
+.image {
+width: 70%;
+}
+
+.image img{
     width: 100%;
 }
+
+/*About*/
+.about_container {
+    margin: 0 20px;
+}
+
+.about_container .about {
+    margin: 100px 0;
+}
+
+.about_container .text-about {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.about_container .about h1 {
+    margin-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 
 /*Projects*/
 
 .projects_container {
-    /* background-color: black; */
-color: white;
-height: 100%;
-margin-top: 100px;
-margin-bottom: 100px;
-margin-left: 20px;
+    background-color: gray;
+    color: white;
+    padding: 100px 0;
+    height: 100%;
+}
+
+.projects_container h1 {
+    margin-bottom: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .projects_container .row {
@@ -247,7 +284,7 @@ the card has a focus, it will scale up.*/
 .card_title::after {
     content: '';
     position: absolute;
-    background: magenta;
+    background: gray;
     height: 4px;
     left: calc(1.5rem * -1);
     bottom: -2px;
@@ -271,7 +308,7 @@ padding: 20px 0;
     display: inline-block;
     text-decoration: none;
     color: black;
-    background-color: magenta;
+    background-color: gra;
     padding: 0.5em 1.25em;
     border-radius: 0.25em;
 }
@@ -335,7 +372,7 @@ or laptop you will see the card animated*/
     .contact_container {
         background-color: black;
         color: white;
-        height: 60vh;
+        padding: 100px 0;
     }
 
     .contact_container .row {
@@ -347,10 +384,32 @@ or laptop you will see the card animated*/
             flex-wrap: wrap;
     }
 
+    .column.right {
+        width: 50%;
+    }
+
+    .column .text {
+        width: 80%;
+    }
+
     .contact_container .column {
         margin: 40px 0;
         justify-content: space-evenly;
     }
+
+    .contact_container .column.right h2,
+    .contact_container .column.right p {
+        padding-bottom: 20px;
+    }
+
+    .contact_container .column.right h2 {
+        text-transform: uppercase;
+    }
+
+    .contact_container .social-buttons span {
+        padding: 0 10px;
+    }
+
     .contact_container .column .contact {
         text-align: center;
     }
@@ -381,4 +440,14 @@ or laptop you will see the card animated*/
     textarea {
         resize: vertical;
     }
+
+    /*Footer*/
+footer .notice {
+    text-align: center;
+    padding: 24px;
+}
+
+footer .notice strong {
+    text-transform: uppercase;
+}
 
