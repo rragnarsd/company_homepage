@@ -2,79 +2,133 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
 body {
     line-height: 1.6;
-    font-family: sans-serif;
+    font-family: 'Lato', sans-serif;
     letter-spacing: 1.0px;
 }
 
 /*Header*/
 
-li {
-    list-style: none;
+.nav {
+    /* background-color: #fff;
+    box-sizing: 1px 1px 4px 0 rgba(0,0,0,0,.1); */
+    /* position: fixed;
+    width: 100%; */
+    /*We want this to be above the content*/
+    /* z-index: 3; */
+    background-color: black;
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1rem 1.8rem; */
+    letter-spacing: 1.2px;
 }
 
-a {
+.nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.nav ul a {
+    display: block;
+    padding: 20px;
+    /* border-right: 1px solid #aaa; */
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav ul a:hover,
+.nav .menu-btn:hover {
+    background-color: #ddd;
+}
+
+.nav .logo {
+    float: left;
+    display: block;
+    font-size: 2em;
+    padding: 10px 20px;
     text-decoration: none;
     color: white;
 }
 
-
-.header {
-    border-bottom: 1px solid white;
+.nav .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
 }
 
-.navbar {
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1.8rem;
-    letter-spacing: 1.2px;
+.nav .menu-icon {
+    user-select: none;
+    /* border: 1px solid grey; */
+    padding: 34px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
 }
 
-.hamburger {
+.nav .menu-icon .nav-icon {
+    background: white;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background .2s ease-out;
+}
+
+.nav .menu-icon .nav-icon:before,
+.nav .menu-icon .nav-icon:after {
+    background: white;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: white;
+    position: absolute;
+    transition: all .2s ease-out;
+}
+
+.nav .menu-icon .nav-icon:before {
+    top: 5px;
+}
+
+.nav .menu-icon .nav-icon:after {
+    top: -5px;
+}
+
+.nav .menu-btn {
     display: none;
 }
 
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: white;
+/*When the menu is in the checked state 
+look for the next available sibling that has 
+a class of menu and change it's max height to 240px*/
+.nav .menu-btn:checked  ~ .menu {
+    max-height: 240px;
 }
 
-.nav_menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nav .menu-btn:checked  ~ .menu-icon .nav-icon {
+    background: transparent;
 }
 
-.nav_item {
-    margin-left: 5rem;
+.nav .menu-btn:checked  ~ .menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top: 0;
+
+}
+.nav .menu-btn:checked  ~ .menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top: 0;
 }
 
-.nav_link{
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: #475569;
-}
-
-.nav_link:hover{
-    color: #482ff7;
-}
-
-.nav_logo {
-    font-size: 2.1rem;
-    font-weight: 500;
-    color: white;
-}
 
 /*Main*/
 
@@ -316,33 +370,12 @@ or laptop you will see the card animated*/
     }
     }
 
-    /*If you don't like any animations showing up on any device */
-    @media (prefers-reduced-motion:no-preference) {
-        *, 
-        *::before,
-        *::after {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-            scroll-behavior: auto !important;
-            transition-delay: 0ms !important;
-        }
-    }
-
     /*Contact Container*/
 
     .contact_container {
         background-color: black;
         color: white;
         padding: 100px 0;
-    }
-
-    .contact_container h1 {
-        margin-bottom: 100px;
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: bold;
-        letter-spacing: 1.2px;
     }
 
     .contact_container .row {
@@ -398,7 +431,7 @@ or laptop you will see the card animated*/
         font-size: 18px;
         border: 1px solid black;
         border-radius: 0.5rem;
-        margin-top: 5px;
+    
     }
 
     .contact_container button {
@@ -409,6 +442,29 @@ or laptop you will see the card animated*/
 
     textarea {
         resize: vertical;
+    }
+
+    .scroll-up {
+        position: fixed;
+        bottom: 15px;
+        right: 30px;
+        z-index: 9;
+    }
+
+    .scroll-up a {
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        display: block;
+        background-color: #1b1b1b;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .scroll-up a span {
+        color: #f2f2f2;
+        line-height: 39px;
+        font-size: 25px;
     }
 
     /*Footer*/
@@ -431,12 +487,16 @@ or laptop you will see the card animated*/
     }
 
     .projects_container .row,
-    .main_container .row, 
-
-    .contact_container .row {
+    .main_container .row {
         margin: 0 auto;
         justify-content: center;
         width: 80%;
+    }
+
+    .contact_container .row {
+        margin: 0 auto;
+        width: 100%;
+        justify-content: center;
     }
 
     .main_container {
@@ -447,13 +507,6 @@ or laptop you will see the card animated*/
         margin: 20px;
     }
 }
-
-/* @media only screen and (max-width: 1200px) {
-.contact_container .text {
-    width: 100%;
-    text-align: center;
-}
-} */
 
 @media only screen and (max-width: 1000px) {
     .main_container .row {
@@ -481,10 +534,6 @@ or laptop you will see the card animated*/
         width: 100%;
     }
 
-    .projects_container .column {
-        margin-bottom: 60px;
-    }
-
     .contact_container .row {
         padding: 0 20px;
     }
@@ -504,7 +553,6 @@ or laptop you will see the card animated*/
 }
 
 @media only screen and (max-width: 700px) {
-
 
     .main_container .column.left {
         align-items: center;
@@ -538,44 +586,24 @@ or laptop you will see the card animated*/
 
 /*Header Responsive*/
 
-@media only screen and (max-width: 768px) {
-    .nav_menu {
-        position: fixed;
-        left: -100%;
-        top: 4rem;
-        flex-direction: column;
-        background-color: black;
-        width: 100%;
-        border-radius: 10px;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow:
-            0 10px 27px rgba(0, 0, 0, 0.05);
-    }
-
-    .nav_menu.active {
-        left: 0;
-    }
-
-    .nav_item {
-        margin: 2.5rem 0;
-    }
-
-    .hamburger {
-        display: block;
-        cursor: pointer;
-    }
-
+@media only screen and (min-width: 1000px) {
     
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
+    
+        .nav li {
+            float: left;
+        }
+    
+        .nav li a {
+            padding: 20px 30px;
+        }
+    
+        .nav .menu {
+            clear: none;
+            float: right;
+            max-height: none;
+        }
+    
+        .nav .menu-icon {
+            display: none;
+        }
     }
-
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-}
