@@ -40,8 +40,9 @@ body {
 
 .nav ul a:hover,
 .nav .menu-btn:hover {
-    background-color: #ddd;
+    background-color: #747474;
 }
+
 
 .nav .logo {
     float: left;
@@ -185,8 +186,13 @@ a class of menu and change it's max height to 240px*/
 
 .buttons .cta_button {
     margin-right: 20px;
-    background-color: gray;
+    background-color: #747474;
     color: white;
+    transition: all 0.3s ease 0s;
+}
+
+.buttons .cta_button:hover {
+    background-color: #5a5a5a;
 }
 
 .buttons button {
@@ -211,7 +217,9 @@ width: 70%;
 /*About*/
 
 .about_container .about {
-    margin: 100px 0;
+    width: 80%;
+    margin: 0 auto;
+    padding: 100px 0;
 }
 
 .about_container .text-about {
@@ -231,14 +239,14 @@ width: 70%;
 /*Projects*/
 
 .projects_container {
-    background-color: gray;
+    background-color: #747474;
     color: white;
     padding: 100px 0;
     height: 100%;
 }
 
 .projects_container h1 {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
@@ -293,7 +301,7 @@ the card has a focus, it will scale up.*/
 .card_title::after {
     content: '';
     position: absolute;
-    background: gray;
+    background: #747474;
     height: 4px;
     left: calc(1.5rem * -1);
     bottom: -2px;
@@ -317,14 +325,15 @@ padding: 20px 0;
     display: inline-block;
     text-decoration: none;
     color: black;
-    background-color: gra;
+    background-color: #fff;
     padding: 0.5em 1.25em;
     border-radius: 0.25em;
 }
 
 .card_content .button:hover,
 .card_content .button:focus{
-background-color: green;
+    background-color: #747474;
+    color: #fff;
 }
 
 
@@ -406,6 +415,15 @@ or laptop you will see the card animated*/
         padding: 0 10px;
     }
 
+    .contact_container .social-buttons a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .contact_container .social-buttons a:hover {
+        border-bottom: 2px solid #747474;
+    }
+
     .contact_container .column .contact {
         text-align: center;
     }
@@ -416,6 +434,7 @@ or laptop you will see the card animated*/
         font-size: 16px;
     }
 
+
     .form-group input,
     .form-group textarea,
     .contact_container button {
@@ -424,13 +443,14 @@ or laptop you will see the card animated*/
         font-size: 18px;
         border: 1px solid black;
         border-radius: 0.5rem;
-    
     }
 
     .contact_container button {
         cursor: pointer;
         margin-top: 20px;
         font-weight: bold;
+        background-color: #747474;
+        color: #fff;
     }
 
     textarea {
@@ -461,6 +481,10 @@ or laptop you will see the card animated*/
     }
 
     /*Footer*/
+    footer {
+        background-color: black;
+        color: #fff;
+    }
 
     footer .notice {
         text-align: center;
@@ -495,11 +519,11 @@ or laptop you will see the card animated*/
         margin-bottom: 60px;
     }
 
-    .contact_container .row {
+    /* .contact_container .row {
         margin: 0 auto;
-        width: 100%;
+        width: 80%;
         justify-content: center;
-    }
+    } */
 
     .main_container {
         padding: 60px 0;
@@ -558,7 +582,7 @@ or laptop you will see the card animated*/
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (min-width: 700px) {
 
     .main_container .column.left {
         align-items: center;
@@ -586,11 +610,11 @@ or laptop you will see the card animated*/
     }
 
     .contact_container .column.right {
-        width: 80%;
+        width: 50%;
     }
 
     .contact_container .column.right {
-        margin: 0 0 40px 0;
+        margin: 0 20px 40px 0;
     }
 }
 
