@@ -17,17 +17,9 @@ body {
 /*Header*/
 
 .nav {
-    /* background-color: #fff;
-    box-sizing: 1px 1px 4px 0 rgba(0,0,0,0,.1); */
-    /* position: fixed;
-    width: 100%; */
-    /*We want this to be above the content*/
-    /* z-index: 3; */
     background-color: black;
-    /* display: flex; */
     justify-content: space-between;
     align-items: center;
-    /* padding: 1rem 1.8rem; */
     letter-spacing: 1.2px;
 }
 
@@ -217,6 +209,7 @@ width: 70%;
 }
 
 /*About*/
+
 .about_container .about {
     margin: 100px 0;
 }
@@ -478,7 +471,7 @@ or laptop you will see the card animated*/
         text-transform: uppercase;
     }
 
-@media only screen and (max-width: 3000px){
+@media (min-width: 1200px) {
     .projects_container,
     .main_container,
     .about_container,
@@ -487,10 +480,19 @@ or laptop you will see the card animated*/
     }
 
     .projects_container .row,
-    .main_container .row {
+    .main_container .row,
+    .about_container .row {
         margin: 0 auto;
         justify-content: center;
         width: 80%;
+    }
+
+    .about_container .text-about {
+        text-align: center;
+    }
+
+    .projects_container .card {
+        margin-bottom: 60px;
     }
 
     .contact_container .row {
@@ -508,7 +510,7 @@ or laptop you will see the card animated*/
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media (max-width: 1000px) {
     .main_container .row {
         align-items: center;
         text-align: center;
@@ -532,6 +534,10 @@ or laptop you will see the card animated*/
 
     .main_container .buttons {
         width: 100%;
+    }
+
+       .projects_container .card {
+        margin-bottom: 60px;
     }
 
     .contact_container .row {
@@ -573,6 +579,10 @@ or laptop you will see the card animated*/
 
     .about_container .about .text-about {
         text-align: center;
+    }
+
+    .projects_container .card {
+        margin-bottom: 60px;
     }
 
     .contact_container .column.right {
