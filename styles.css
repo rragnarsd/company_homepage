@@ -33,7 +33,6 @@ body {
 .nav ul a {
     display: block;
     padding: 20px;
-    /* border-right: 1px solid #aaa; */
     text-decoration: none;
     color: #fff;
 }
@@ -47,10 +46,10 @@ body {
 .nav .logo {
     float: left;
     display: block;
-    font-size: 2em;
+    font-size: 2rem;
     padding: 10px 20px;
     text-decoration: none;
-    color: white;
+    color: #fff;
 }
 
 .nav .menu {
@@ -69,7 +68,7 @@ body {
 }
 
 .nav .menu-icon .nav-icon {
-    background: white;
+    background: #fff;
     display: block;
     height: 2px;
     width: 18px;
@@ -79,12 +78,12 @@ body {
 
 .nav .menu-icon .nav-icon:before,
 .nav .menu-icon .nav-icon:after {
-    background: white;
+    background: #fff;
     content: "";
     display: block;
     height: 100%;
     width: 100%;
-    color: white;
+    color: #fff;
     position: absolute;
     transition: all .2s ease-out;
 }
@@ -127,7 +126,7 @@ a class of menu and change it's max height to 240px*/
 
 .main_container {
     background-color: black;
-    padding: 1rem 1.8rem;
+    padding: 16px 29px;
 }
 
 .main_container .row {
@@ -148,7 +147,7 @@ a class of menu and change it's max height to 240px*/
 
 .main_container .column {
     width: 100%;
-    color: white;
+    color: #fff;
 }
 
 .main_container .heading,
@@ -157,7 +156,7 @@ a class of menu and change it's max height to 240px*/
 }
 
 .main_container .column .text_container .heading h1 {
-    font-size: 34px;
+    font-size: 	2.1rem;
 }
 
 .main_container .column .text_container .heading h2 {
@@ -187,7 +186,7 @@ a class of menu and change it's max height to 240px*/
 .buttons .cta_button {
     margin-right: 20px;
     background-color: #747474;
-    color: white;
+    color: #fff;
     transition: all 0.3s ease 0s;
 }
 
@@ -202,7 +201,7 @@ a class of menu and change it's max height to 240px*/
     border: none;
     font-weight: bold;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .image {
@@ -240,7 +239,7 @@ width: 70%;
 
 .projects_container {
     background-color: #747474;
-    color: white;
+    color: #fff;
     padding: 100px 0;
     height: 100%;
 }
@@ -262,16 +261,15 @@ width: 70%;
     flex-wrap: wrap;
 }
 
-
 /*Card*/
 
 .card {
     background-image: url('img.jpg');
     background-size: cover;
     background-color: black;
-    padding: 8rem 0 0;
+    padding: 128px 0 0;
     max-width: 35ch;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     overflow: hidden;
     transition: transform 500ms ease;
 }
@@ -285,12 +283,10 @@ the card has a focus, it will scale up.*/
 
 
 .card_content {
-    padding: 1.5rem;
+    padding: 24px;
     background: linear-gradient(hsl(0 0% 0% / 0),hsl(20 0% 0% / 0.3) 20%,
         hsl(0 0% 0% / 1)
     );
-    /* transform: translateY(65%);
-    transition: transform 500ms ease; */
 }
 
 .card_title {
@@ -303,9 +299,9 @@ the card has a focus, it will scale up.*/
     position: absolute;
     background: #747474;
     height: 4px;
-    left: calc(1.5rem * -1);
+    left: calc(24px * -1);
     bottom: -2px;
-    width: calc(100% + 1.5rem);
+    width: calc(100% + 24px);
     transform-origin: left;
     transition: transform 500ms ease;
 }
@@ -328,6 +324,7 @@ padding: 20px 0;
     background-color: #fff;
     padding: 0.5em 1.25em;
     border-radius: 0.25em;
+    transition: all 0.3s ease 0s;
 }
 
 .card_content .button:hover,
@@ -376,7 +373,7 @@ or laptop you will see the card animated*/
 
     .contact_container {
         background-color: black;
-        color: white;
+        color: #fff;
         padding: 100px 0;
     }
 
@@ -431,7 +428,7 @@ or laptop you will see the card animated*/
     .form-group {
         width: 100%;
         margin-top: 20px;
-        font-size: 16px;
+        font-size: 1rem;
     }
 
 
@@ -440,9 +437,9 @@ or laptop you will see the card animated*/
     .contact_container button {
         width: 100%;
         padding: 10px;
-        font-size: 18px;
+        font-size: 	1.13rem;
         border: 1px solid black;
-        border-radius: 0.5rem;
+        border-radius: 8px;
     }
 
     .contact_container button {
@@ -451,6 +448,11 @@ or laptop you will see the card animated*/
         font-weight: bold;
         background-color: #747474;
         color: #fff;
+        transition: all 0.3s ease 0s;
+    }
+
+    .contact_container button:hover {
+        background-color: #5a5a5a;
     }
 
     textarea {
@@ -477,7 +479,7 @@ or laptop you will see the card animated*/
     .scroll-up a span {
         color: #f2f2f2;
         line-height: 39px;
-        font-size: 25px;
+        font-size: 1.6rem;
     }
 
     /*Footer*/
@@ -518,8 +520,8 @@ or laptop you will see the card animated*/
     .projects_container .card {
         margin-bottom: 60px;
     }
-
-    /* .contact_container .row {
+/* 
+    .contact_container .row {
         margin: 0 auto;
         width: 80%;
         justify-content: center;
@@ -535,17 +537,18 @@ or laptop you will see the card animated*/
 }
 
 @media (max-width: 1000px) {
+    
     .main_container .row {
         align-items: center;
         text-align: center;
     }
 
     .main_container {
-        padding: 3rem 1.8rem;
+        padding: 48px 29px;
     }
 
     .main_container .buttons button {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .main_container .column.right  {
@@ -584,13 +587,31 @@ or laptop you will see the card animated*/
 
 @media only screen and (min-width: 700px) {
 
+    .nav li {
+        float: left;
+    }
+
+    .nav li a {
+        padding: 20px 30px;
+    }
+
+    .nav .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .nav .menu-icon {
+        display: none;
+    }
+
     .main_container .column.left {
         align-items: center;
         margin: 60px 0;
     }
 
     .main_container .column.right .buttons {
-        font-size: 14px;
+        font-size: 0.9rem;
     }
 
     .main_container .column.left .text_container{
@@ -617,27 +638,3 @@ or laptop you will see the card animated*/
         margin: 0 20px 40px 0;
     }
 }
-
-/*Header Responsive*/
-
-@media only screen and (min-width: 1000px) {
-    
-    
-        .nav li {
-            float: left;
-        }
-    
-        .nav li a {
-            padding: 20px 30px;
-        }
-    
-        .nav .menu {
-            clear: none;
-            float: right;
-            max-height: none;
-        }
-    
-        .nav .menu-icon {
-            display: none;
-        }
-    }
